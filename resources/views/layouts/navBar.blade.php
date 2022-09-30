@@ -9,25 +9,21 @@
         </button>
         <div class="collapse navbar-collapse navbar-offcanvas" id="offcanvas-menu-home">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown active">
+                {{-- <li class="nav-item dropdown active">
                     <a class="nav-link" href="#" role="button" id="header-first-drop-down"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home<span
                             class="sr-only">(current)</span></a>
                     <ul class="dropdown-menu coodiv-dropdown-header" aria-labelledby="header-first-drop-down">
                         <li><a class="dropdown-item" href="index.html">homepage 01</a></li>
-                        <li><a class="dropdown-item"
-                                href="https://demo.coodiv.net/html/bredh/html/v2/index.html">homepage 02<span
-                                    class="nav-new-tag">new</span></a></li>
-                        <li><a class="dropdown-item"
-                                href="https://demo.coodiv.net/html/bredh/html/v2/index-video.html">homepage
-                                03<span class="nav-soon-tag">new</span></a></li>
-                        <li><a class="dropdown-item"
-                                href="https://coodiv.net/whmcs/index.php?systpl=bredh-standard-moon">WHMCS
-                                version</a></li>
+                        <li><a class="dropdown-item"    href="https://demo.coodiv.net/html/bredh/html/v2/index.html">homepage 02<span class="nav-new-tag">new</span></a></li>
+                      
                     </ul>
+                </li> --}}
+                <li class="nav-item {{ Route::currentRouteName()=='index' ? 'active' : '' }}">
+                    <a class="nav-link" href="{{ route('index') }}">Anasayfa</a>
                 </li>
                 <li class="nav-item megamenu dropdown">
-                    <a class="nav-link" href="#" role="button" id="services-megamenu" data-toggle="dropdown"
+                    <a class="nav-link" href="javascript:void(0)" role="button" id="services-megamenu" data-toggle="dropdown"
                         aria-haspopup="true" aria-expanded="false">Services <span
                             class="megamenu-toggle"></span></a>
                     <div class="dropdown-menu coodiv-dropdown-megamnu default-megamenu"

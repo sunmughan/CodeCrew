@@ -188,28 +188,28 @@
             <div class="col-md-5">
                 <div class="display-on-hover-box-container">
                     <a href="#tab1" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/quality-badge.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/quality-badge.svg') }}" alt="" />
                     </a>
                     <a href="#tab2" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/inclined-rocket.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/inclined-rocket.svg') }}" alt="" />
                     </a>
                     <a href="#tab3" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/public-speech.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/public-speech.svg') }}" alt="" />
                     </a>
                     <a href="#tab4" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/big-light.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/big-light.svg') }}" alt="" />
                     </a>
                     <a href="#tab5" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/big-lifesaver.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/big-lifesaver.svg') }}" alt="" />
                     </a>
                     <a href="#tab6" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/headphones-with-thin-mic.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/headphones-with-thin-mic.svg') }}" alt="" />
                     </a>
                     <a href="#tab7" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/inclined-paper-plane.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/inclined-paper-plane.svg') }}" alt="" />
                     </a>
                     <a href="#tab8" class="display-on-hover-box-items">
-                        <img src="img/svgs/hover-box/big-telephone.svg" alt="" />
+                        <img src="{{ asset('assets/img/svgs/hover-box/big-telephone.svg') }}" alt="" />
                     </a>
                     <div class="display-on-hover-box-content">
                         <div class="display-on-hover-box-cotent-items">
@@ -264,7 +264,7 @@
     <h1>12% OFF for all Web hosting services</h1>
 </section>
 <section class="perlex-efect-section parallax-window padding-100-0 position-relative" data-parallax="scroll"
-    data-image-src="img/demo/office.jpg">
+    data-image-src="{{ asset('assets/img/demo/office.jpg') }}">
 
     <h6 class="d-none">video section</h6>
     <span class="perlex-hidden-iverlow"></span>
@@ -280,13 +280,9 @@
 <section class="map-server-places-section position-relative">
     <div class="container">
         <div class="map-gene-server-place">
-            <img src="img/maps/map.png" alt="" />
+            <img src="{{ asset('assets/img/maps/map.png') }}" alt="" />
             <div class="server-places-spans">
-                <span style="top: 34%;left: 17%;"> <b>USA Server</b> <small class="good">99.99%</small></span>
-                <span style="top: 76%;left: 29%;"> <b>BRAZIL Server</b> <small class="avrage">85.70%</small></span>
-                <span style="top: 50%;left: 43%;"> <b>ALGERIA Server</b> <small class="bad">40.80%</small></span>
-                <span style="top: 30%;left: 70%;"> <b>ASIA Server</b> <small class="avrage">75.20%</small></span>
-                <span style="top: 82%;left: 76%;"> <b>AUSTRALIA Server</b> <small class="good">95.89%</small></span>
+                <span style="top: 45%;left: 53%;"> <b>Türkiye</b> <small class="bad">Türkiyenin tamamında</small></span>
             </div>
         </div>
         <div class="map-comment-area">
