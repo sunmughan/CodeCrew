@@ -24,7 +24,7 @@
                 </li>
                 <li class="nav-item megamenu dropdown">
                     <a class="nav-link" href="javascript:void(0)" role="button" id="services-megamenu" data-toggle="dropdown"
-                        aria-haspopup="true" aria-expanded="false">Services <span
+                        aria-haspopup="true" aria-expanded="false">Hizmetler <span
                             class="megamenu-toggle"></span></a>
                     <div class="dropdown-menu coodiv-dropdown-megamnu default-megamenu"
                         aria-labelledby="services-megamenu">
@@ -32,15 +32,14 @@
                             <div class="p-2 bd-highlight">
                                 <a href="hosting.html">
                                     <i class="bredhicon-sun"></i>
-                                    <h5>web hosting</h5>
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
-                                        veritatis nulla eum laudantium.</p>
+                                    <h5>İşletme Siteleri</h5>
+                                    <p>İşletmenize uygun özen ile tasarlanmış web çözümleri sunuyoruz.</p>
                                 </a>
                             </div>
                             <div class="p-2 bd-highlight">
                                 <a href="ssl.html">
                                     <i class="bredhicon-award-empty"></i>
-                                    <h5>SSL Certificate</h5>
+                                    <h5>E-Ticaret Çözümleri</h5>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem,
                                         veritatis nulla eum laudantium.</p>
                                 </a>
@@ -130,26 +129,9 @@
             </ul>
         </div>
         <ul class="header-user-info-coodiv">
-            <li class="dropdown"><a role="button" id="header-login-dropdown" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false" href="#">sign in</a> <span>12365-8448</span>
+            <li><a role="button" id="header-login-dropdown" 
+                  href="{{ route('kontrolPaneli') }}">sign in</a> <span>12365-8448</span>
 
-                <div class="dropdown-menu coodiv-dropdown-header user-login-dropdown"
-                    aria-labelledby="header-login-dropdown">
-                    <form class="user-login-dropdown-form"
-                        action="https://demo.coodiv.net/html/bredh/html/v1/signin.html" data-form="validate">
-                        <div class="form-group username">
-                            <input type="email" name="username" placeholder="Your Email" class="form-control">
-                            <i class="fas fa-at"></i>
-                        </div>
-                        <div class="form-group password">
-                            <input type="password" name="password" placeholder="Password" class="form-control">
-                            <i class="fas fa-lock"></i>
-                        </div>
-                        <button data-toggle="tooltip" data-placement="left" title="login"
-                            class="user-login-dropdown-form-button" type="submit"><i
-                                class="fas fa-angle-right"></i></button>
-                    </form>
-                </div>
 
             </li>
         </ul>

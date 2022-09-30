@@ -15,3 +15,15 @@ use App\Http\Controllers\MainController;
 */
 
 Route::get('/', [MainController::class, 'index'])->name('index');
+
+
+
+Route::middleware('Madmin')->prefix('KontrolPaneli')->group( function () {
+
+    Route::get('/', function(){
+
+        echo "asd";
+    })->name('kontrolPaneli');
+
+
+});
