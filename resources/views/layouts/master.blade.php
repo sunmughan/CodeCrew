@@ -46,6 +46,5 @@
 	@include('layouts.script')
 </body>
 
-<!-- Mirrored from demo.coodiv.net/html/bredh/html/v1/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 19 May 2022 10:31:35 GMT -->
 
 </html>

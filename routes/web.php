@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
+use App\Http\Controllers\PanelController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,10 +21,7 @@ Route::get('/', [MainController::class, 'index'])->name('index');
 
 Route::middleware('Madmin')->prefix('KontrolPaneli')->group( function () {
 
-    Route::get('/', function(){
-
-        echo "asd";
-    })->name('kontrolPaneli');
+    Route::get('/', [PanelController::class, 'index'])->name('kontrolPaneli');
 
 
 });
