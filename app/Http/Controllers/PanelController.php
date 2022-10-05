@@ -8,6 +8,6 @@ class PanelController extends Controller
 {
     public static function index()
     {
-        return "Kontrol Paneli";
+        return view('admin.index');
     }
 }

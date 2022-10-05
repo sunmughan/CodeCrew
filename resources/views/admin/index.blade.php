@@ -10,14 +10,14 @@
 @section('style')
 
     <!-- BEGIN: Page CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-ecommerce.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/charts/chart-apex.min.css">
-    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/extensions/ext-component-toastr.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/core/menu/menu-types/vertical-menu.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/pages/dashboard-ecommerce.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/plugins/charts/chart-apex.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/plugins/extensions/ext-component-toastr.min.css') }}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
-    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/style.css') }}">
     <!-- END: Custom CSS-->
 
     
@@ -554,7 +554,7 @@
                 title="Billy Hopkins"
                 class="avatar pull-up"
                 >
-                <img src="../../../app-assets/images/portrait/small/avatar-s-9.jpg" alt="Avatar" width="33" height="33" />
+                <img src="{{ asset('adminAssets/images/portrait/small/avatar-s-9.jpg') }}" alt="Avatar" width="33" height="33" />
                 </div>
                 <div
                 data-bs-toggle="tooltip"
@@ -563,7 +563,7 @@
                 title="Amy Carson"
                 class="avatar pull-up"
                 >
-                <img src="../../../app-assets/images/portrait/small/avatar-s-6.jpg" alt="Avatar" width="33" height="33" />
+                <img src="{{ asset('adminAssets/images/portrait/small/avatar-s-6.jpg') }}" alt="Avatar" width="33" height="33" />
                 </div>
                 <div
                 data-bs-toggle="tooltip"
@@ -572,7 +572,7 @@
                 title="Brandon Miles"
                 class="avatar pull-up"
                 >
-                <img src="../../../app-assets/images/portrait/small/avatar-s-8.jpg" alt="Avatar" width="33" height="33" />
+                <img src="{{ asset('adminAssets/images/portrait/small/avatar-s-8.jpg') }}" alt="Avatar" width="33" height="33" />
                 </div>
                 <div
                 data-bs-toggle="tooltip"
@@ -582,7 +582,7 @@
                 class="avatar pull-up"
                 >
                 <img
-                    src="../../../app-assets/images/portrait/small/avatar-s-20.jpg"
+                    src="{{ asset('adminAssets/images/portrait/small/avatar-s-20.jpg') }}"
                     alt="Avatar"
                     width="33"
                     height="33"
@@ -596,7 +596,7 @@
                 class="avatar pull-up"
                 >
                 <img
-                    src="../../../app-assets/images/portrait/small/avatar-s-20.jpg"
+                    src="{{ asset('adminAssets/images/portrait/small/avatar-s-20.jpg') }}"
                     alt="Avatar"
                     width="33"
                     height="33"
@@ -630,7 +630,7 @@
             <div class="browser-states">
                 <div class="d-flex">
                 <img
-                    src="../../../app-assets/images/icons/google-chrome.png"
+                    src="{{ asset('adminAssets/images/icons/google-chrome.png') }}"
                     class="rounded me-1"
                     height="30"
                     alt="Google Chrome"
@@ -645,7 +645,7 @@
             <div class="browser-states">
                 <div class="d-flex">
                 <img
-                    src="../../../app-assets/images/icons/mozila-firefox.png"
+                    src="{{ asset('adminAssets/images/icons/mozila-firefox.png') }}"
                     class="rounded me-1"
                     height="30"
                     alt="Mozila Firefox"
@@ -660,7 +660,7 @@
             <div class="browser-states">
                 <div class="d-flex">
                 <img
-                    src="../../../app-assets/images/icons/apple-safari.png"
+                    src="{{ asset('adminAssets/images/icons/apple-safari.png') }}"
                     class="rounded me-1"
                     height="30"
                     alt="Apple Safari"
@@ -675,7 +675,7 @@
             <div class="browser-states">
                 <div class="d-flex">
                 <img
-                    src="../../../app-assets/images/icons/internet-explorer.png"
+                    src="{{ asset('adminAssets/images/icons/internet-explorer.png') }}"
                     class="rounded me-1"
                     height="30"
                     alt="Internet Explorer"
@@ -689,7 +689,7 @@
             </div>
             <div class="browser-states">
                 <div class="d-flex">
-                <img src="../../../app-assets/images/icons/opera.png" class="rounded me-1" height="30" alt="Opera Mini" />
+                <img src="{{ asset('adminAssets/images/icons/opera.png') }}" class="rounded me-1" height="30" alt="Opera Mini" />
                 <h6 class="align-self-center mb-0">Opera Mini</h6>
                 </div>
                 <div class="d-flex align-items-center">
@@ -828,7 +828,7 @@
 @section('script')
 
 <!-- BEGIN: Page JS-->
-<script src="../../../app-assets/js/scripts/pages/dashboard-ecommerce.min.js"></script>
+<script src="{{ asset('adminAssets/js/scripts/pages/dashboard-ecommerce.min.js') }}"></script>
 <!-- END: Page JS-->
 
 <script>
