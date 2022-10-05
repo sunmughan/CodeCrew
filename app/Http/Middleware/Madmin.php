@@ -17,7 +17,6 @@ class Madmin
     public function handle(Request $request, Closure $next)
     {
 
-        echo "asd";
         return $next($request);
     }
 }
