@@ -25,4 +25,14 @@ class PageController extends Controller
     {
         return "insert";
     }
+
+    public static function insertPost(Request $request)
+    {
+        $this->validate($request, [
+            'pages_name' => 'required|string',
+            'pages_action' => 'required|string|min:6',
+            'pages_author' => 'required|string|min:6|integer',
+            'pages_main' => 'required|string|min:10|integer',
+        ]);
+    }
 }

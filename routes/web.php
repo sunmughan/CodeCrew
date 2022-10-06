@@ -14,11 +14,21 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
     Route::get('/', [PanelController::class, 'index'])->name('kontrolPaneli');
 
-    // PAGES ROUTES
+    // PAGES ROUTES GET
 
     Route::get('/Sayfalar', [PageController::class, 'index'])->name('sayfalar');
     Route::get('/Sayfalar/Duzenle/{id}', [PageController::class, 'update'])->name('sayfaGuncelle');
     Route::get('/Sayfalar/Ekle', [PageController::class, 'insert'])->name('sayfaEkle');
+
+    // PAGES ROUTES POST
+
+    // . values :
+    // . pages_name
+    // . pages action
+    // . pages_author
+    // . pages_main ? true : false
+    Route::post('/sayfaEklePost', [PageController::class, 'insertPost'])->name('sayfaEklePost');
+
 
 
 
