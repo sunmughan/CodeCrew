@@ -39,6 +39,10 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
     Route::get('/Menuler', [MenuController::class, 'index'])->name('menuler');
 
+    // LOAD ROUTES HELPER ROUTE
+
+    Route::post('/loadActions', [MainController::class, 'loadActions'])->name('loadActions');
+
 
 
     Route::get('/router', function(Router $route){

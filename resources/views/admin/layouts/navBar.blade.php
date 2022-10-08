@@ -39,13 +39,16 @@
           </li>
           <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Sayfalar">Sayfalar</span></a>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i>
-          <span class="menu-title text-truncate" data-i18n="Yazılar">Yazılar</span></a>
-          </li>
 
-          <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('menuler') }}"><i data-feather="file-text"></i>
+
+          <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('menuler') }}"><i data-feather='menu'></i>
           <span class="menu-title text-truncate" data-i18n="Menüler">Menüler</span></a>
           </li>
+{{-- 
+          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i>
+          <span class="menu-title text-truncate" data-i18n="Yazılar">Yazılar</span></a>
+          </li> --}}
+
 
 
       </ul>

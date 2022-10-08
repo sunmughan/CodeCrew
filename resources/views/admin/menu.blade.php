@@ -14,6 +14,7 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/pages/dashboard-ecommerce.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/plugins/charts/chart-apex.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/plugins/extensions/ext-component-toastr.min.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/vendors/css/forms/select/select2.min.css') }}">
     <!-- END: Page CSS-->
 
     <!-- BEGIN: Custom CSS-->
@@ -29,6 +30,12 @@
 
 
     <!-- BEGIN: Content-->
+
+    <script>
+
+        let load_Actions = "{{ route('loadActions') }}",
+        token = "{{ csrf_token() }}";
+    </script>
          
 
             
@@ -38,7 +45,7 @@
                 <div class="col-12">
                     <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Invoice</h4>
+                        <h4 class="card-title">Menüler</h4>
                     </div>
                     <div class="card-body">
                         <form action="#" class="invoice-repeater">
@@ -50,7 +57,7 @@
                             <div class="row d-flex align-items-end">
                                 <div class="col-md-4 col-12">
                                 <div class="mb-1">
-                                    <label class="form-label" for="itemname">Item Name</label>
+                                    <label class="form-label" for="itemname">Menü İsmi</label>
                                     <input
                                     type="text"
                                     class="form-control"
@@ -62,16 +69,13 @@
                                 </div>
             
                                 <div class="col-md-2 col-12">
-                                <div class="mb-1">
-                                    <label class="form-label" for="itemcost">Cost</label>
-                                    <input
-                                    type="number"
-                                    class="form-control"
-                                    id="itemcost"
-                                    aria-describedby="itemcost"
-                                    placeholder="32"
-                                    />
-                                </div>
+                                    <div class="mb-1">
+                                        <label class="form-label" for="menuAction">Menü Yönlendirmesi</label>
+                                            <select class="form-select actionSelect" id="select2-basic">
+                                              <option value="default">Yönlendirme Seçin</option>
+                                          
+                                            </select>
+                                    </div>
                                 </div>
             
                                 <div class="col-md-2 col-12">
@@ -98,16 +102,16 @@
                                     <div class="mb-1">
                                         <button class="btn btn-outline-danger text-nowrap px-1" data-repeater-delete type="button">
                                         <i data-feather="x" class="me-25"></i>
-                                        <span>Delete</span>
+                                        <span>Sil</span>
                                         </button>
                                     </div>
                                   
                                 </div>
                                 <div class="col-md-2 col-12 mb-50">
                                     <div class="mb-1">
-                                        <button class="btn btn-outline-danger text-nowrap px-1" data-repeater-delete type="button">
-                                        <i data-feather="x" class="me-25"></i>
-                                        <span>Delete</span>
+                                        <button class="btn btn-outline-success text-nowrap px-1" data-repeater-delete type="button">
+                                        <i data-feather='save' class="me-25"></i>
+                                        <span>Kaydet</span>
                                         </button>
                                     </div>
                                   
@@ -125,6 +129,7 @@
                                 <i data-feather="plus" class="me-25"></i>
                                 <span>Add New</span>
                             </button>
+                            <button type="button" class="btn btn-outline-primary btn-page-block">Default</button>
                             </div>
                         </div>
                         </form>
@@ -147,6 +152,9 @@
 <!-- BEGIN: Page JS-->
 <script src="{{ asset('adminAssets/js/scripts/forms/form-repeater.min.js') }}"></script>
 <script src="{{ asset('adminAssets/vendors/js/forms/repeater/jquery.repeater.min.js') }}"></script>
+<script src="{{ asset('adminAssets/vendors/js/forms/select/select2.full.min.js') }}"></script>
+<script src="{{ asset('adminAssets/js/scripts/forms/form-select2.min.js') }}"></script>
+<script src="{{ asset('adminAssets/js/scripts/extensions/ext-component-blockui.js') }}"></script>
 <!-- END: Page JS-->
 
 <script>
