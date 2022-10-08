@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Routing\Router;
+
+
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\MenuController;
 
 
 Route::get('/', [MainController::class, 'index'])->name('index');
@@ -19,6 +23,7 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
     Route::get('/Sayfalar', [PageController::class, 'index'])->name('sayfalar');
     Route::get('/Sayfalar/Duzenle/{id}', [PageController::class, 'update'])->name('sayfaGuncelle');
     Route::get('/Sayfalar/Ekle', [PageController::class, 'insert'])->name('sayfaEkle');
+    Route::get('/Sayfalar/SayfaSil/{id}', [PageController::class, 'delete'])->name('sayfaSil');
 
     // PAGES ROUTES POST
 
@@ -28,8 +33,22 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
     // . pages_author
     // . pages_main ? true : false
     Route::post('/sayfaEklePost', [PageController::class, 'insertPost'])->name('sayfaEklePost');
+    Route::post('/sayfaGuncellePost', [PageController::class, 'updatePost'])->name('sayfaGuncellePost');
+
+    // MEMU ROUTES GET
+
+    Route::get('/Menuler', [MenuController::class, 'index'])->name('menuler');
 
 
 
+    Route::get('/router', function(Router $route){
+
+        $r = $route->getRoutes();
+
+        foreach ($r as $value) {
+            echo $value->uri();
+            echo "<br/>";
+        }
+    });
 
 });

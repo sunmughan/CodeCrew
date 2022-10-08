@@ -37,13 +37,14 @@
         Genel Ayarlar</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Sayfa Ayarları">Sayfa Ayarları</span></a>
+          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Sayfalar">Sayfalar</span></a>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span class="menu-title text-truncate" data-i18n="Yazı Ayarları">Yazı Ayarları</span></a>
+          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i>
+          <span class="menu-title text-truncate" data-i18n="Yazılar">Yazılar</span></a>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-          <span class="menu-title text-truncate" data-i18n="Menü Ayarları">Menü Ayarları</span></a>
+
+          <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('menuler') }}"><i data-feather="file-text"></i>
+          <span class="menu-title text-truncate" data-i18n="Menüler">Menüler</span></a>
           </li>
 
 
