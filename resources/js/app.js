@@ -19,10 +19,12 @@ $(function(){
 
         
         $.post(load_Actions, {_token: token}, function(response){
-           console.log(response.items);
-
-           let array = response.items;
-
+          
+          let array = response.items;
+        
+          console.log(response.itemss);
+          console.log(response.items);
+          
 
            array.forEach(item => {
 

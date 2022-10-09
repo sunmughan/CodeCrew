@@ -15,24 +15,41 @@ class MainController extends Controller
     public function loadActions(Router $route)
     {
         $routes = array();
+        $routess = array();
         $i = 0;
         $r = $route->getRoutes();
 
+       
+
+        foreach ($r as $value) {
+            $methods[$i] = $value->methods[0];
+            $i++;
+        }
+        $i = 0;
+
+        
 
         foreach ($r as $value) {
             $routes[$i] = $value->action;
             $i++;
         }
-
         $i = 0;
 
         foreach ($routes as $value) {
-            if(array_key_exists("as",$value))
-            {
-                $routes[$i] = $value['as'];
 
+            if($methods[$i] == "GET")
+            {
+                if(array_key_exists("as",$value))
+                {
+                        $routes[$i] = $value['as'];
+                }
+            }else{
             }
+
             $i++;
+
+           
+          
         }
 
         $i = 0;
@@ -41,6 +58,7 @@ class MainController extends Controller
 
         return response()->json([
             'items' => $routes,
+            'itemss' => $methods,
         ],200); 
 
 
