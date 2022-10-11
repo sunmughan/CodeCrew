@@ -44,5 +44,58 @@ $(function(){
 
     });
 
+
+
+    $(document).on('click', '.menuInsert', function() { 
+      let mid = this.attributes['m_id'].value;
+
+      const elems = document.querySelectorAll('.menuForm');
+      // let formData = $('#menuForm').serializeArray();
+      // var ad = $("#menuForm #m_title").val();
+
+      // $.post(inserMenu, {_token: token, mid: mid,formData: formData}, function(response){
+          
+      //    console.log(response.items);
+          
+      //   }, 'json');
+       
+
+      console.log(elems);
+
+
+    });
+    // $('.menuInsert').on('click', function(){
+
+    //   let mid = this.attributes['m_id'].value;
+
+    //   alert(mid);
+        
+        // $.post(load_Actions, {_token: token}, function(response){
+          
+        //   let array = response.items;
+        
+        //   console.log(response.itemss);
+        //   console.log(response.items);
+          
+
+        //    array.forEach(item => {
+
+
+        //        $('.actionSelect').append($('<option>').val(item).text(item));
+            
+        //    });
+
+
+        //     $.unblockUI({ 
+                
+        //     }); 
+
+
+        // }, 'json');
+       
+
+    // });
+
+    
 });
 

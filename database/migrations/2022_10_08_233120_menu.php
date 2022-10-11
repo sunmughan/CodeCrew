@@ -16,10 +16,11 @@ return new class extends Migration
         Schema::create('menu', function (Blueprint $table) {
             $table->increments('m_id');
             $table->string('m_title', 255);
-            $table->string('m_', 255);
-            $table->string('pages_author', 255);
-            $table->boolean('pages_main')->default(false);
-            $table->boolean('pages_status')->default(true);
+            $table->string('m_action', 255);
+            $table->string('m_author', 255);
+            $table->boolean('m_main')->default(true);
+            $table->integer('m_mainMenuID')->default(0);
+            $table->boolean('m_status')->default(true);
             $table->timestamps();
         });
     }

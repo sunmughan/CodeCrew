@@ -39,6 +39,10 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
     Route::get('/Menuler', [MenuController::class, 'index'])->name('menuler');
 
+    // MENU ROUTES POST
+
+    Route::post('/MenuInsert', [MenuController::class, 'insertMenu'])->name('insertMenu');
+
     // LOAD ROUTES HELPER ROUTE
 
     Route::post('/loadActions', [MainController::class, 'loadActions'])->name('loadActions');
