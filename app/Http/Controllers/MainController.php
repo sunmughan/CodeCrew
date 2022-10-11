@@ -4,12 +4,23 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Router;
+use Illuminate\Support\Facades\DB;
 
 class MainController extends Controller
 {
+
+    public static array $Data;
+
+    public function __construct()
+    {
+
+        self::$Data['menu'] = DB::table('menu')->where('m_status',1)->get();
+
+    }
+
     public function index()
     {
-        return view('index');
+        return view('index',self::$Data);
     }
 
     public function loadActions(Router $route)
