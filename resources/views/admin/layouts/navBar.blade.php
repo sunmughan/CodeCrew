@@ -33,15 +33,73 @@
     <div class="shadow-bottom"></div>
     <div class="main-menu-content">
       <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+        <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">
+          Panolar</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+            </li>
+
+            <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='airplay'></i><span class="menu-title text-truncate" data-i18n="Analistik Pano">Analitiksel Pano</span></a>
+            </li>
+
+            <li class=" nav-item {{ Route::currentRouteName()== 'istatistikPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('istatistikPaneli') }}"><i data-feather='bar-chart'></i><span class="menu-title text-truncate" data-i18n="Analistik Pano">İstatiksel Pano</span></a>
+            </li>
+
+          <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">
+            Sayfa Ayarları</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+              </li>
+
+            {{-- sidebar-group-active open --}}
+            <li class="nav-item has-sub {{ Route::currentRouteName()== 'kontrolPaneli' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='home'></i><span class="menu-title text-truncate" data-i18n="Anasayfa">Anasayfa</span></a>
+              <ul class="menu-content">
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='sliders'></i><span class="menu-title text-truncate" data-i18n="Carousel">Carousel</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='trello'></i><span class="menu-title text-truncate" data-i18n="Hizmetlerimiz">Hizmetlerimiz</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='mail'></i><span class="menu-title text-truncate" data-i18n="Mail Aboneliği">Mail Aboneliği</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='package'></i><span class="menu-title text-truncate" data-i18n="Paketler">Paketler</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='square'></i><span class="menu-title text-truncate" data-i18n="Referanslar">Referanslar</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='help-circle'></i><span class="menu-title text-truncate" data-i18n="Yardım Ve Destek">Yardım Ve Destek</span></a>
+                </li>
+              </ul>
+            </li>
+  
+            <li class="nav-item has-sub {{ Route::currentRouteName()== 'kontrolPaneli' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='book'></i><span class="menu-title text-truncate" data-i18n="Hakkında">Hakkında</span></a>
+              <ul class="menu-content">
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='trello'></i><span class="menu-title text-truncate" data-i18n="Hizmetlerimiz">Hizmetlerimiz</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='flag'></i><span class="menu-title text-truncate" data-i18n="Destek">Destek</span></a>
+                </li>
+
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='help-circle'></i><span class="menu-title text-truncate" data-i18n="Destek">Nasıl Çalışır</span></a>
+                </li>
+                
+      
+              </ul>
+            </li>
+  
+    
+                
+      
       <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">
         Genel Ayarlar</span>
         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
           </li>
-          <li class=" nav-item"><a class="d-flex align-items-center" href="app-email.html"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Sayfalar">Sayfalar</span></a>
+          <li class=" nav-item {{ Route::currentRouteName()== 'sayfalar' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('sayfalar') }}"><i data-feather="file-text"></i><span class="menu-title text-truncate" data-i18n="Sayfalar">Sayfalar</span></a>
           </li>
 
 
-          <li class=" nav-item"><a class="d-flex align-items-center" href="{{ route('menuler') }}"><i data-feather='menu'></i>
+          <li class=" nav-item  {{ Route::currentRouteName()== 'menuler' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('menuler') }}"><i data-feather='menu'></i>
           <span class="menu-title text-truncate" data-i18n="Menüler">Menüler</span></a>
           </li>
 {{-- 

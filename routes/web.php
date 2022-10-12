@@ -11,12 +11,14 @@ use App\Http\Controllers\MenuController;
 
 
 Route::get('/', [MainController::class, 'index'])->name('index');
+Route::get('/Hakkinda', [MainController::class, 'aboutUs'])->name('hakkinda');
 
 
 
 Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
     Route::get('/', [PanelController::class, 'index'])->name('kontrolPaneli');
+    Route::get('/IstatikselPano', [PanelController::class, 'index'])->name('istatistikPaneli');
 
     // PAGES ROUTES GET
 

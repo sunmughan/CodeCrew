@@ -1,4 +1,7 @@
 <main class="container mb-auto">
+
+    @if (Route::currentRouteName()== 'index' )
+			
     <div class="carousel carousel-main">
         <div class="carousel-cell">
             <h3 class="mt-3 main-header-text-title"><span>the best domain provider in the area</span>secure and
@@ -36,4 +39,14 @@
        
     </div>
    
+
+    @else
+
+    <h3 class="mt-3 main-header-text-title"><span>best web hosting provider 2019 adwords</span>about bredh team
+        <span class="sub-page-breadcrumb"><a href="#">homepage</a> - about bredh team</span>
+    </h3>
+
+    @endif
+
+
 </main>

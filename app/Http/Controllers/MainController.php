@@ -23,6 +23,11 @@ class MainController extends Controller
         return view('index',self::$Data);
     }
 
+    public function aboutUs()
+    {
+        return view('aboutUs',self::$Data);
+    }
+
     public function loadActions(Router $route)
     {
         $routes = array();

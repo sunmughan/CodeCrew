@@ -23,7 +23,7 @@
 	@include('layouts.preloader')
 
 
-	<div id="coodiv-header" class="d-flex mx-auto flex-column">
+	<div id="coodiv-header" class="d-flex mx-auto flex-column  {{ Route::currentRouteName()== 'index' ? '' : 'subpages-header' }}">
 		<div class="bg_overlay_header">
 			<div class="bg-img-header-new-standard">&nbsp;</div>
 		</div>
@@ -32,8 +32,9 @@
 
 
 		<div class="mt-auto header-top-height"></div>
-		
+	
         @include('layouts.carousel')
+		
 
 		<div class="mt-auto"></div>
 	</div>
