@@ -8,6 +8,11 @@
 @section('style')
 @endsection
 
+
+@section('breadcrumb-items')
+<span class="sub-page-breadcrumb"><a href="{{ route('index') }}">Anasayfa</a> - Hakkında</span>
+@endsection
+
 @section('content')
 <section class="padding-40-0-100 position-relative">
     <div class="container">

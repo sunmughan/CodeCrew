@@ -28,6 +28,18 @@ class MainController extends Controller
         return view('aboutUs',self::$Data);
     }
 
+    public function contactUs()
+    {
+        return view('contactUs',self::$Data);
+    }
+
+    public function helpCenter()
+    {
+        self::$Data['questions'] = DB::table('helpCenter')->select('hc_question','hc_actionId')->get();
+        self::$Data['answers'] = DB::table('helpCenter')->get();
+        return view('helpCenter',self::$Data);
+    }
+
     public function loadActions(Router $route)
     {
         $routes = array();

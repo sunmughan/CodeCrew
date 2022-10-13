@@ -8,6 +8,9 @@
 @section('style')
 @endsection
 
+
+
+
 @section('content')
 <section class="padding-100-0-50">
     <div class="container">

@@ -44,6 +44,14 @@
             <li class=" nav-item {{ Route::currentRouteName()== 'istatistikPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('istatistikPaneli') }}"><i data-feather='bar-chart'></i><span class="menu-title text-truncate" data-i18n="Analistik Pano">İstatiksel Pano</span></a>
             </li>
 
+            <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">
+              Destek</span>
+              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
+                </li>
+
+            <li class=" nav-item {{ Route::currentRouteName()== 'istatistikPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('istatistikPaneli') }}"><i data-feather='flag'></i><span class="menu-title text-truncate" data-i18n="Analistik Pano">Yardım Merkezi</span></a>
+            </li>
+
           <li class=" navigation-header"><span data-i18n="Apps &amp; Pages">
             Sayfa Ayarları</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-horizontal"><circle cx="12" cy="12" r="1"></circle><circle cx="19" cy="12" r="1"></circle><circle cx="5" cy="12" r="1"></circle></svg>
@@ -84,6 +92,19 @@
                 <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='help-circle'></i><span class="menu-title text-truncate" data-i18n="Destek">Nasıl Çalışır</span></a>
                 </li>
                 
+      
+              </ul>
+            </li>
+  
+            <li class="nav-item has-sub {{ Route::currentRouteName()== 'kontrolPaneli' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='phone'></i><span class="menu-title text-truncate" data-i18n="Hakkında">İletişim</span></a>
+              <ul class="menu-content">
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='file-text'></i><span class="menu-title text-truncate" data-i18n="İletişim Formu">İletişim Formu</span></a>
+                </li>
+      
+                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='pen-tool'></i><span class="menu-title text-truncate" data-i18n="Destek">İletişim Bilgileri</span></a>
+                </li>
+
       
               </ul>
             </li>

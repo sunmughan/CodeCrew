@@ -12,6 +12,8 @@ use App\Http\Controllers\MenuController;
 
 Route::get('/', [MainController::class, 'index'])->name('index');
 Route::get('/Hakkinda', [MainController::class, 'aboutUs'])->name('hakkinda');
+Route::get('/Iletisim', [MainController::class, 'contactUs'])->name('iletisim');
+Route::get('/YardimMerkezi', [MainController::class, 'helpCenter'])->name('yardimMerkezi');
 
 
 

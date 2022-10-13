@@ -1,6 +1,6 @@
 <nav id="coodiv-navbar-header" class="navbar navbar-expand-md fixed-header-layout">
     <div class="container main-header-coodiv-s">
-        <a class="navbar-brand" href="index.html"><img width="100" src="{{ asset('assets/img/header/logo.jpg') }}" alt="" /></a>
+        <a class="navbar-brand" href="{{ route('index') }}"><img width="100" src="{{ asset('assets/img/header/logo.jpg') }}" alt="" /></a>
         <button class="navbar-toggle offcanvas-toggle menu-btn-span-bar ml-auto" data-toggle="offcanvas"
             data-target="#offcanvas-menu-home">
             <span></span>
