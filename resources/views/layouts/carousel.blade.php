@@ -4,10 +4,10 @@
 			
     <div class="carousel carousel-main">
         <div class="carousel-cell">
-            <h3 class="mt-3 main-header-text-title"><span>the best domain provider in the area</span>secure and
-                guaranteed <small>order you own now</small></h3>
-            <form action="https://demo.coodiv.net/html/bredh/html/v1/domains.html" id="domain-search-header"
-                class="col-md-6">
+            <h3 class="mt-3 main-header-text-title"><span>{{ $carousel->ca_topText }}</span> {{ $carousel->ca_mainText }}<small>{{ $carousel->ca_description }}</small></h3>
+           @if ($carousel->ca_searchStatus == 1)
+
+           <form action="" method="POST" id="domain-search-header" class="col-md-6">
                 <i class="fas fa-globe"></i>
                 <input type="text" placeholder="Site içinde arama yapabilirsiniz" id="domain" name="domains">
                 <span class="inline-button-domain-order">
@@ -17,23 +17,9 @@
                         type="submit" name="submit" value="Search"><i class="fas fa-search"></i></button>
                 </span>
             </form>
-            {{-- <span class="col-md-6 domain-search-header-pricetext">starting at <b>$0.99/year</b></span> --}}
-            <div class="owl-theme owl-domain-prices-previw col-md-7">
-                
-                <div class="domain-name-classes item">
-                    <div class="domain-img"><img src="{{ asset('assets/img/domain/black/com.png') }}" alt="" /></div>
-                    <span class="price">$2.99</span>
-                    <span class="features-domains">
-                        <a data-toggle="tooltip" data-placement="right" title="on sale"><img
-                                src="{{ asset('assets/img/svgs/Time.svg') }}" alt="" /></a>
-                        <a data-toggle="tooltip" data-placement="right" title="secure"><img
-                                src="{{ asset('assets/img/svgs/Locked.svg') }}" alt="" /></a>
-                    </span>
-                </div>
-              
-           
-           
-            </div>
+               
+           @endif
+                  
         </div>
 
        
@@ -46,8 +32,7 @@
 
     <div class="row">
         <div class="col-md-5">
-            <h3 class="mt-3 main-header-text-title mr-tp-60"><span>You still got questions ?</span>you can talk
-                to our humans.
+            <h3 class="mt-3 main-header-text-title mr-tp-60"><span>Hala soruların mı var ?</span>Bizimle iletişime geçebilirsin.
                 @yield('breadcrumb-items')
             </h3>
             <div class="contact-us-social-icons">
@@ -56,49 +41,51 @@
                 <a class="yb" href="#"><i class="fab fa-youtube"></i></a>
             </div>
         </div>
-        <div class="col-md-7">
-            <form class="row form-contain-home contact-page-form-send" id="ajax-contact" method="post"
-                action="https://demo.coodiv.net/html/bredh/html/v1/mailer.php">
+      @if ($contact->c_formStatus == 1)
+      <div class="col-md-7">
+        <form class="row form-contain-home contact-page-form-send" id="ajax-contact" method="POST"
+            action="">
 
-                <h5>get in touch <span>discouver how can our services grow your business.</span></h5>
-                <div id="form-messages"></div>
+            <h5>İletişime geç <span>CodeCrew ile iletişime geç.</span></h5>
+            <div id="form-messages"></div>
 
-                <div class="col-md-12">
+            <div class="col-md-12">
 
-                    <div class="field input-field">
-                        <input class="form-contain-home-input" type="text" id="name" name="name"
-                            placeholder="entre your name" required>
+                <div class="field input-field">
+                    <input class="form-contain-home-input" type="text" id="name" name="name"
+                        placeholder="İsim ve soyisim girin" required>
 
-                        <i class="fas fa-user"></i>
-                    </div>
+                    <i class="fas fa-user"></i>
                 </div>
+            </div>
 
-                <div class="col-md-12">
+            <div class="col-md-12">
 
-                    <div class="field input-field">
-                        <input class="form-contain-home-input" type="email" id="email" name="email"
-                            placeholder="entre your email" required>
+                <div class="field input-field">
+                    <input class="form-contain-home-input" type="email" id="email" name="email"
+                        placeholder="E-posta adresi girin" required>
 
-                        <i class="far fa-envelope"></i>
-                    </div>
+                    <i class="far fa-envelope"></i>
                 </div>
+            </div>
 
-                <div class="col-md-12">
+            <div class="col-md-12">
 
-                    <div class="field input-field">
-                        <textarea class="form-contain-home-input" id="message" name="message"
-                            placeholder="entre your message" required></textarea>
-
-                    </div>
-                </div>
-
-                <div class="btn-holder-contect">
-                    <button type="submit">Send</button>
+                <div class="field input-field">
+                    <textarea class="form-contain-home-input" id="message" name="message"
+                        placeholder="Mesajınızı yazın" required></textarea>
 
                 </div>
-            </form>
+            </div>
 
-        </div>
+            <div class="btn-holder-contect">
+                <button type="submit">Gönder</button>
+
+            </div>
+        </form>
+
+    </div>
+      @endif
     </div>
 
     @endif
@@ -106,7 +93,7 @@
 
     @if(Route::currentRouteName()== 'hakkinda')
 
-    <h3 class="mt-3 main-header-text-title"><span>best web hosting provider 2019 adwords</span>about bredh team
+    <h3 class="mt-3 main-header-text-title">CodeCrew Hakkında
       @yield('breadcrumb-items')
     </h3>
 
@@ -115,7 +102,7 @@
     
     @if(Route::currentRouteName()== 'yardimMerkezi')
 
-    <h3 class="mt-3 main-header-text-title"><span>best web hosting provider 2019 adwords</span>about bredh team
+    <h3 class="mt-3 main-header-text-title">Yardım Merkezi
       @yield('breadcrumb-items')
     </h3>
 

@@ -58,9 +58,9 @@
               </li>
 
             {{-- sidebar-group-active open --}}
-            <li class="nav-item has-sub {{ Route::currentRouteName()== 'kontrolPaneli' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='home'></i><span class="menu-title text-truncate" data-i18n="Anasayfa">Anasayfa</span></a>
+            <li class="nav-item has-sub {{ Route::currentRouteName()== 'carousel' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='home'></i><span class="menu-title text-truncate" data-i18n="Anasayfa">Anasayfa</span></a>
               <ul class="menu-content">
-                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='sliders'></i><span class="menu-title text-truncate" data-i18n="Carousel">Carousel</span></a>
+                <li class=" nav-item {{ Route::currentRouteName()== 'carousel' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('carousel') }}"><i data-feather='sliders'></i><span class="menu-title text-truncate" data-i18n="Carousel">Carousel</span></a>
                 </li>
       
                 <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='trello'></i><span class="menu-title text-truncate" data-i18n="Hizmetlerimiz">Hizmetlerimiz</span></a>
@@ -99,8 +99,8 @@
             <li class="nav-item has-sub {{ Route::currentRouteName()== 'kontrolPaneli' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='phone'></i><span class="menu-title text-truncate" data-i18n="Hakkında">İletişim</span></a>
               <ul class="menu-content">
       
-                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='file-text'></i><span class="menu-title text-truncate" data-i18n="İletişim Formu">İletişim Formu</span></a>
-                </li>
+                {{-- <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='file-text'></i><span class="menu-title text-truncate" data-i18n="İletişim Formu">İletişim Formu</span></a>
+                </li> --}}
       
                 <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='pen-tool'></i><span class="menu-title text-truncate" data-i18n="Destek">İletişim Bilgileri</span></a>
                 </li>

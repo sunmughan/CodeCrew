@@ -22,9 +22,8 @@
             <div class="col-md-5">
                 <h5 class="immediate-help-center-title">Acil yardım mı lazım?</h5>
                 <p class="immediate-help-center-text">Destek ekibimiz 7/24 sizinle</p>
-                <a class="immediate-help-center-link" href="#">00213 123 45 67 89</a>
-                <a class="immediate-help-center-link" href="#"><span class="__cf_email__"
-                        data-cfemail="afdcdadfdfc0dddbefccc0c0cbc6d981c1cadb">[email&#160;protected]</span></a>
+                <a class="immediate-help-center-link" href="tel:{{ $contact->c_tel }}">{{ $contact->c_tel }}</a>
+                <a class="immediate-help-center-link" href="mailto:{{ $contact->c_email }}"><span >{{ $contact->c_email }}</span></a>
             </div>
         </div>
     </div>
@@ -39,9 +38,9 @@
         </div>
         <div class="map-comment-area">
             <h3 class="map-comment-area-title">Dünyanın her yerine yayılıyoruz</h3>
-            <p class="map-comment-area-text">Our 4 million users are the 4 million reasons why you have to use our
+            {{-- <p class="map-comment-area-text">Our 4 million users are the 4 million reasons why you have to use our
                 services. Each service we provide is a source of real-time intelligence about new and current
-                threats. That’s how we run our servers to make that network even stronger.</p>
+                threats. That’s how we run our servers to make that network even stronger.</p> --}}
         </div>
     </div>
     <div class="maps-comments-area-overflow"></div>

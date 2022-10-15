@@ -8,6 +8,7 @@ use App\Http\Controllers\MainController;
 use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
+use App\Http\Controllers\CarouselController;
 
 
 Route::get('/', [MainController::class, 'index'])->name('index');
@@ -46,6 +47,12 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
     // MENU ROUTES POST
 
     Route::post('/MenuInsert', [MenuController::class, 'insertMenu'])->name('insertMenu');
+
+
+    // ANASAYFA CAROUSEL SETTİNGS ROUTES GET
+
+    Route::get('/Anasayfa/Carousel', [CarouselController::class, 'index'])->name('carousel');
+
 
     // LOAD ROUTES HELPER ROUTE
 

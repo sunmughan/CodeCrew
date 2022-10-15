@@ -20,6 +20,7 @@ class MainController extends Controller
 
     public function index()
     {
+        self::$Data['carousel'] = DB::table('carousel')->first();
         return view('index',self::$Data);
     }
 
@@ -30,6 +31,7 @@ class MainController extends Controller
 
     public function contactUs()
     {
+        self::$Data['contact'] = DB::table('contact')->first();
         return view('contactUs',self::$Data);
     }
 
