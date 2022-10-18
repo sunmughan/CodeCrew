@@ -4,6 +4,110 @@ import '../css/app.css';
 
 $(function(){
 
+  
+  
+  
+  $('.carouselUpdatePost').on('click', function(){
+    
+    let formData = $('#carouselUpdateForm').serializeArray();
+    
+    $.blockUI({
+        message: '<div class="spinner-border text-white" role="status"></div>',
+        css: {
+          backgroundColor: 'transparent',
+          border: '0'
+        },
+        overlayCSS: {
+          opacity: 0.5
+        }
+      });
+
+    
+    $.post(carouselUpdatePost, {_token: token, formData: formData}, function(response){
+      
+        if(response.status)
+        {
+          $.unblockUI({}); 
+
+          toastr.success("Carousel ayarlarınız güncellendi", "Carousel Ayarları!", {
+            closeButton: !0,
+            tapToDismiss: !1,
+            showMethod: "slideDown",
+            hideMethod: "slideUp"
+        });
+      }else {
+          $.unblockUI({}); 
+
+          toastr.error("Carousel ayarları güncellenirken bir hata ile karşılaşıldı", "Carousel Ayarları!", {
+            closeButton: !0,
+            tapToDismiss: !1,
+            showMethod: "slideDown",
+            hideMethod: "slideUp"
+        });
+        
+        }
+
+
+    }, 'json');
+   
+
+});
+
+
+  $('#carouselSearchStatusUpdate').on('click', function(){
+
+    let searchStatus = 1;
+    
+    if(document.getElementById('searchStatus').checked)
+    {
+
+      searchStatus = 1;
+
+    }else {
+      searchStatus = 0; 
+    }
+
+    $.blockUI({
+        message: '<div class="spinner-border text-white" role="status"></div>',
+        css: {
+          backgroundColor: 'transparent',
+          border: '0'
+        },
+        overlayCSS: {
+          opacity: 0.5
+        }
+      });
+
+    
+    $.post(carouselSearchStatusPost, {_token: token, searchStatus: searchStatus}, function(response){
+      
+      if(response.status)
+      {
+        $.unblockUI({}); 
+
+        toastr.success("Carousel ayarlarınız güncellendi", "Carousel Ayarları!", {
+          closeButton: !0,
+          tapToDismiss: !1,
+          showMethod: "slideDown",
+          hideMethod: "slideUp"
+      });
+    }else {
+        $.unblockUI({}); 
+
+        toastr.error("Carousel ayarları güncellenirken bir hata ile karşılaşıldı", "Carousel Ayarları!", {
+          closeButton: !0,
+          tapToDismiss: !1,
+          showMethod: "slideDown",
+          hideMethod: "slideUp"
+      });
+      
+      }
+
+    }, 'json');
+   
+
+});
+
     $('.actionSelect').on('click', function(){
 
         $.blockUI({
@@ -64,6 +168,10 @@ $(function(){
 
 
     });
+
+
+
+
     // $('.menuInsert').on('click', function(){
 
     //   let mid = this.attributes['m_id'].value;

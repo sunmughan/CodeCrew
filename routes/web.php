@@ -50,9 +50,13 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
 
     // ANASAYFA CAROUSEL SETTİNGS ROUTES GET
-
+    
     Route::get('/Anasayfa/Carousel', [CarouselController::class, 'index'])->name('carousel');
+    
+    // ANASAYFA CAROUSEL SETTİNGS ROUTES POST
 
+    Route::post('/Anasayfa/carouselSearchStatusPost', [CarouselController::class, 'carouselSearchStatus'])->name('carouselSearchStatusPost');
+    Route::post('/Anasayfa/carouselUpdatePost', [CarouselController::class, 'carouselUpdatePost'])->name('carouselUpdatePost');
 
     // LOAD ROUTES HELPER ROUTE
 
