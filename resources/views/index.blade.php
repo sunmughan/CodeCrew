@@ -28,15 +28,14 @@
            
             <div class="col-md-8 mr-tp-60 hom-page-service-more">
                 <span class="hom-page-service-more-banner"><img src="{{ asset('assets/img/bg/cercle.png') }}" alt="" /></span>
-                <h5 class="hom-page-service-more-title">check out our latest offers <span>Simply Dummy Text Of The
-                        Printing And Typesetting Industry</span></h5>
+                <h5 class="hom-page-service-more-title">{{ $mailSubscribe->ms_title }} <span> {{ $mailSubscribe->ms_description }} </span></h5>
                 <form
-                    action="https://codeoxy.us16.list-manage.com/subscribe/post?u=49eb75689a0b6e7eb66b67e51&amp;id=4366ef611f"
+                    action=""
                     method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form"
                     class="validate hom-page-service-more-form" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
                         <div class="mc-field-group">
-                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                            <input {{ $mailSubscribe->ms_status == false ? 'disabled' : '' }} type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
                         </div>
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display:none"></div>
@@ -44,8 +43,10 @@
                         </div>
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text"
                                 name="b_49eb75689a0b6e7eb66b67e51_4366ef611f" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe"
-                                id="mc-embedded-subscribe" class="button"></div>
+                       @if ($mailSubscribe->ms_status)
+                       <div class="clear"><input type="submit" value="Abone Ol"  name="subscribe"
+                        id="mc-embedded-subscribe" class="button"></div>
+                       @endif
                     </div>
                 </form>
                 <script type="e1c4e3aa2a7008edd99466cb-text/javascript">

@@ -9,6 +9,7 @@ use App\Http\Controllers\PanelController;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CarouselController;
+use App\Http\Controllers\MailSubscribeController;
 
 
 Route::get('/', [MainController::class, 'index'])->name('index');
@@ -57,6 +58,16 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
     Route::post('/Anasayfa/carouselSearchStatusPost', [CarouselController::class, 'carouselSearchStatus'])->name('carouselSearchStatusPost');
     Route::post('/Anasayfa/carouselUpdatePost', [CarouselController::class, 'carouselUpdatePost'])->name('carouselUpdatePost');
+   
+    // ANASAYFA MAİL SUBSCRİBE SETTİNGS ROUTES GET
+
+    Route::get('/Anasayfa/MailAboneligi', [MailSubscribeController::class, 'index'])->name('mailSubscribe');
+
+     // ANASAYFA MAİL SUBSCRİBE SETTİNGS ROUTES POST
+
+     Route::post('/Anasayfa/mailSubscribeStatusPost', [MailSubscribeController::class, 'mailSubscribeStatus'])->name('mailSubscribeStatus');
+     Route::post('/Anasayfa/mailSubscribeUpdatePost', [MailSubscribeController::class, 'mailSubscribeUpdatePost'])->name('mailSubscribeUpdatePost');
+ 
 
     // LOAD ROUTES HELPER ROUTE
 

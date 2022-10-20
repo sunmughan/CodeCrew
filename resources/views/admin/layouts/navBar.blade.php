@@ -58,7 +58,7 @@
               </li>
 
             {{-- sidebar-group-active open --}}
-            <li class="nav-item has-sub {{ Route::currentRouteName()== 'carousel' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='home'></i><span class="menu-title text-truncate" data-i18n="Anasayfa">Anasayfa</span></a>
+            <li class="nav-item has-sub {{ Route::currentRouteName()== 'carousel' || Route::currentRouteName() == 'mailSubscribe' ? 'sidebar-group-active open' : '' }}"><a class="d-flex align-items-center" href="#"><i data-feather='home'></i><span class="menu-title text-truncate" data-i18n="Anasayfa">Anasayfa</span></a>
               <ul class="menu-content">
                 <li class=" nav-item {{ Route::currentRouteName()== 'carousel' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('carousel') }}"><i data-feather='sliders'></i><span class="menu-title text-truncate" data-i18n="Carousel">Carousel</span></a>
                 </li>
@@ -66,7 +66,7 @@
                 <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='trello'></i><span class="menu-title text-truncate" data-i18n="Hizmetlerimiz">Hizmetlerimiz</span></a>
                 </li>
       
-                <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='mail'></i><span class="menu-title text-truncate" data-i18n="Mail Aboneliği">Mail Aboneliği</span></a>
+                <li class=" nav-item {{ Route::currentRouteName()== 'mailSubscribe' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('mailSubscribe') }}"><i data-feather='mail'></i><span class="menu-title text-truncate" data-i18n="Mail Aboneliği">Mail Aboneliği</span></a>
                 </li>
       
                 <li class=" nav-item {{ Route::currentRouteName()== 'kontrolPaneli' ? 'active' : '' }}"><a class="d-flex align-items-center" href="{{ route('kontrolPaneli') }}"><i data-feather='package'></i><span class="menu-title text-truncate" data-i18n="Paketler">Paketler</span></a>

@@ -21,6 +21,7 @@ class MainController extends Controller
     public function index()
     {
         self::$Data['carousel'] = DB::table('carousel')->first();
+        self::$Data['mailSubscribe'] = DB::table('mailSubscribe')->first();
         return view('index',self::$Data);
     }
 

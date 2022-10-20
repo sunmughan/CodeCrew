@@ -4,7 +4,107 @@ import '../css/app.css';
 
 $(function(){
 
+
+
+  $('#mailSubscribeStatusUpdate').on('click', function(){
+
+    let mailSubscribeStatus = 1;
+    
+    if(document.getElementById('mailSubscribeStatus').checked)
+    {
+
+      mailSubscribeStatus = 1;
+
+    }else {
+      mailSubscribeStatus = 0; 
+    }
+
+    $.blockUI({
+        message: '<div class="spinner-border text-white" role="status"></div>',
+        css: {
+          backgroundColor: 'transparent',
+          border: '0'
+        },
+        overlayCSS: {
+          opacity: 0.5
+        }
+      });
+
+    
+    $.post(mailSubscribeStatusPost, {_token: token, mailSubscribeStatus: mailSubscribeStatus}, function(response){
+      
+      if(response.status)
+      {
+        $.unblockUI({}); 
+
+        toastr.success("Mail aboneliği ayarlarınız güncellendi", "Mail Aboneliği Ayarları!", {
+          closeButton: !0,
+          tapToDismiss: !1,
+          showMethod: "slideDown",
+          hideMethod: "slideUp"
+      });
+    }else {
+        $.unblockUI({}); 
+
+        toastr.error("Mail aboneliği ayarları güncellenirken bir hata ile karşılaşıldı", "Mail Aboneliği Ayarları!", {
+          closeButton: !0,
+          tapToDismiss: !1,
+          showMethod: "slideDown",
+          hideMethod: "slideUp"
+      });
+      
+      }
+
+    }, 'json');
+   
+
+});
+
+  $('.mailSubscribeUpdatePost').on('click', function(){
+    let formData = $('#mailSubscribeUpdateForm').serializeArray();
+
+       
+    $.blockUI({
+      message: '<div class="spinner-border text-white" role="status"></div>',
+      css: {
+        backgroundColor: 'transparent',
+        border: '0'
+      },
+      overlayCSS: {
+        opacity: 0.5
+      }
+    });
+
   
+  $.post(mailSubscribeUpdatePost, {_token: token, formData: formData}, function(response){
+    
+      if(response.status)
+      {
+        $.unblockUI({}); 
+
+        toastr.success("Mail aboneliği ayarlarınız güncellendi", "Mail Aboneliği Ayarları!", {
+          closeButton: !0,
+          tapToDismiss: !1,
+          showMethod: "slideDown",
+          hideMethod: "slideUp"
+      });
+    }else {
+        $.unblockUI({}); 
+
+        toastr.error("Mail aboneliği ayarları güncellenirken bir hata ile karşılaşıldı", "Mail Aboneliği Ayarları!", {
+          closeButton: !0,
+          tapToDismiss: !1,
+          showMethod: "slideDown",
+          hideMethod: "slideUp"
+      });
+      
+      }
+
+
+  }, 'json');
+
+
+  });
   
   
   $('.carouselUpdatePost').on('click', function(){

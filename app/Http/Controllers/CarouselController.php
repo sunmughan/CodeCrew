@@ -19,7 +19,7 @@ class CarouselController extends Controller
 
     public static function index()
     {
-        return view('admin.carousel',self::$Data);
+        return view('admin.anasayfa.carousel',self::$Data);
     }
 
     public static function carouselSearchStatus(Request $request)
