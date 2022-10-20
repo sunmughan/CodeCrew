@@ -12,7 +12,6 @@
     <!-- BEGIN: Page CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/core/menu/menu-types/vertical-menu.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/pages/dashboard-ecommerce.min.css') }}">
-    <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/plugins/charts/chart-apex.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/css/plugins/extensions/ext-component-toastr.min.css') }}">
     <link rel="stylesheet" type="text/css" href="{{ asset('adminAssets/vendors/css/forms/select/select2.min.css') }}">
     <!-- END: Page CSS-->

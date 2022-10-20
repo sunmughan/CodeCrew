@@ -3,7 +3,6 @@
   <!-- BEGIN Vendor JS-->
 
   <!-- BEGIN: Page Vendor JS-->
-  <script src="{{ asset('adminAssets/vendors/js/charts/apexcharts.min.js') }}"></script>
   <script src="{{ asset('adminAssets/vendors/js/extensions/toastr.min.js') }}"></script>
   <!-- END: Page Vendor JS-->
 

@@ -10,6 +10,7 @@ use App\Http\Controllers\PageController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\CarouselController;
 use App\Http\Controllers\MailSubscribeController;
+use App\Http\Controllers\ReferancesController;
 
 
 Route::get('/', [MainController::class, 'index'])->name('index');
@@ -48,6 +49,10 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
     // MENU ROUTES POST
 
     Route::post('/MenuInsert', [MenuController::class, 'insertMenu'])->name('insertMenu');
+
+    // REFERANCESE ROUTES GET
+
+    Route::get('/Referanslar', [ReferancesController::class, 'index'])->name('referances');
 
 
     // ANASAYFA CAROUSEL SETTİNGS ROUTES GET
