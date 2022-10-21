@@ -87,7 +87,7 @@
           <div class="card-body text-sm-end text-center ps-sm-0">
             <a
               href="javascript:void(0)"
-              data-bs-target="#addRoleModal"
+              data-bs-target="#modals-slide-in"
               data-bs-toggle="modal"
               class="stretched-link text-nowrap add-new-role"
             >
@@ -100,6 +100,43 @@
     </div>
   </div>
 
+</div>
+
+
+<div class="modal modal-slide-in new-user-modal fade" id="modals-slide-in">
+  <div class="modal-dialog">
+    <form class="add-new-user modal-content pt-0">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+      <div class="modal-header mb-1">
+        <h5 class="modal-title" id="exampleModalLabel">Referans Ekle</h5>
+      </div>
+      <div class="modal-body flex-grow-1">
+        <div class="mb-1">
+          <label class="form-label" for="basic-icon-default-fullname">Referans İsmi</label>
+          <input
+            type="text"
+            class="form-control dt-full-name"
+            id="basic-icon-default-fullname"
+            placeholder="John Doe"
+            name="user-fullname"
+          />
+        </div>
+        <div class="mb-1">
+          <label class="form-label" for="basic-icon-default-uname">Referans Logosu</label>
+          <input
+            type="text"
+            id="basic-icon-default-uname"
+            class="form-control dt-uname"
+            placeholder="Web Developer"
+            name="user-name"
+          />
+        </div>
+        
+        <button type="submit" class="btn btn-primary me-1 data-submit">Submit</button>
+        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+      </div>
+    </form>
+  </div>
 </div>
 
 @endsection
