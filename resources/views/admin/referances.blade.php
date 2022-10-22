@@ -35,6 +35,8 @@
 
 
 
+  @foreach ($referances as $item)
+
   <div class="col-xl-4 col-lg-6 col-md-6">
     <div class="card">
       <div class="card-body row">
@@ -45,19 +47,20 @@
           <div class="col-sm-7">
             <div class="card-body text-sm-end text-center ps-sm-0">
               <a
-                href="{{ route('index') }}"
-               
-                class="stretched-link text-nowrap "
-              >
+              href="javascript:void(0)"
+              data-bs-target="#modal-{{ $item->r_name }}{{ $item->r_id }}"
+              data-bs-toggle="modal"
+              class="stretched-link text-nowrap add-new-role"
+            >
                 
               </a>
-              <h4 class="fw-bolder">Nike </h4>
+              <h4 class="fw-bolder">{{ $item->r_name }} </h4>
             </div>
           </div>
         <div class="col-sm-5">
           <div class="d-flex align-items-end justify-content-center h-100">
             <img
-              src="{{ asset('assets/img/pertners/nike.svg') }}"
+              src="{{ asset('assets/img/pertners/'.$item->r_logo) }}"
               class="img-fluid mt-2"
               alt="Image"
               width="85"
@@ -68,6 +71,48 @@
       </div>
     </div>
   </div>
+  {{--  --}}
+
+  
+<div class="modal modal-slide-in new-user-modal fade" id="modal-{{ $item->r_name }}{{ $item->r_id }}">
+  <div class="modal-dialog">
+    <form class="add-new-user modal-content pt-0">
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+      <div class="modal-header mb-1">
+        <h5 class="modal-title" id="exampleModalLabel">Referans Ekle</h5>
+      </div>
+      <div class="modal-body flex-grow-1">
+        <div class="mb-1">
+          <label class="form-label" for="basic-icon-default-fullname">Referans İsmi</label>
+          <input
+            type="text"
+            class="form-control dt-full-name"
+            id="basic-icon-default-fullname"
+            placeholder="Referans İsmi"
+            value="{{ $item->r_name }}"
+            name="user-fullname"
+          />
+        </div>
+        <div class="mb-1">
+          <label class="form-label" for="basic-icon-default-uname">Referans Logosu</label>
+          <div class="col-md-12">
+
+            <img style="border: 1px  solid #161D31;margin:10px;" width="200" src="{{ asset('assets/img/pertners/'.$item->r_logo) }}" alt="">
+          </div>
+          <input class="form-control" name="r_name" value="{{ asset('assets/img/pertners/'.$item->r_logo) }}" type="file" id="formFile">
+        </div>
+        
+        <button type="submit" class="btn btn-primary me-1 data-submit">Güncelle</button>
+        <a class="btn btn-danger me-1 data-submit">Sil</a>
+        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal">İptal</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+      
+  @endforeach
+
 
 
   <div class="col-xl-4 col-lg-6 col-md-6">
@@ -87,7 +132,7 @@
           <div class="card-body text-sm-end text-center ps-sm-0">
             <a
               href="javascript:void(0)"
-              data-bs-target="#modals-slide-in"
+              data-bs-target="#modal-new"
               data-bs-toggle="modal"
               class="stretched-link text-nowrap add-new-role"
             >
@@ -103,7 +148,9 @@
 </div>
 
 
-<div class="modal modal-slide-in new-user-modal fade" id="modals-slide-in">
+
+  
+<div class="modal modal-slide-in new-user-modal fade" id="modal-new">
   <div class="modal-dialog">
     <form class="add-new-user modal-content pt-0">
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
@@ -117,27 +164,22 @@
             type="text"
             class="form-control dt-full-name"
             id="basic-icon-default-fullname"
-            placeholder="John Doe"
-            name="user-fullname"
+            placeholder="Referans İsmi"
+            name="r_name"
           />
         </div>
         <div class="mb-1">
           <label class="form-label" for="basic-icon-default-uname">Referans Logosu</label>
-          <input
-            type="text"
-            id="basic-icon-default-uname"
-            class="form-control dt-uname"
-            placeholder="Web Developer"
-            name="user-name"
-          />
+          <input class="form-control" name="r_logo" type="file" id="formFile">
         </div>
         
-        <button type="submit" class="btn btn-primary me-1 data-submit">Submit</button>
-        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="submit" class="btn btn-primary me-1 data-submit">Ekle</button>
+        <button type="reset" class="btn btn-outline-secondary" data-bs-dismiss="modal">İptal</button>
       </div>
     </form>
   </div>
 </div>
+
 
 @endsection
 
