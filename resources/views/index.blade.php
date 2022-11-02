@@ -290,10 +290,8 @@
             </div>
         </div>
         <div class="map-comment-area">
-            <h3 class="map-comment-area-title">We are running in all of the world</h3>
-            <p class="map-comment-area-text">Our 4 million users are the 4 million reasons why you have to use our
-                services. Each service we provide is a source of real-time intelligence about new and current
-                threats. That’s how we run our servers to make that network even stronger.</p>
+            <h3 class="map-comment-area-title">Yakında Tüm Dünyaya Açılıyoruz</h3>
+            <p class="map-comment-area-text">Kuruluşumuzu büyütüyoruz</p>
         </div>
     </div>
     <div class="maps-comments-area-overflow"></div>
