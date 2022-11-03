@@ -59,20 +59,20 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
     Route::post('/Referanslar/referanceInsertPost', [ReferancesController::class, 'referanceInsertPost'])->name('referanceInsertPost');
 
 
-    // ANASAYFA CAROUSEL SETTİNGS ROUTES GET
+    // ANASAYFA CAROUSEL SETTINGS ROUTES GET
     
     Route::get('/Anasayfa/Carousel', [CarouselController::class, 'index'])->name('carousel');
     
-    // ANASAYFA CAROUSEL SETTİNGS ROUTES POST
+    // ANASAYFA CAROUSEL SETTINGS ROUTES POST
 
     Route::post('/Anasayfa/carouselSearchStatusPost', [CarouselController::class, 'carouselSearchStatus'])->name('carouselSearchStatusPost');
     Route::post('/Anasayfa/carouselUpdatePost', [CarouselController::class, 'carouselUpdatePost'])->name('carouselUpdatePost');
    
-    // ANASAYFA MAİL SUBSCRİBE SETTİNGS ROUTES GET
+    // ANASAYFA MAIL SUBSCRIBE SETTINGS ROUTES GET
 
     Route::get('/Anasayfa/MailAboneligi', [MailSubscribeController::class, 'index'])->name('mailSubscribe');
 
-     // ANASAYFA MAİL SUBSCRİBE SETTİNGS ROUTES POST
+     // ANASAYFA MAIL SUBSCRIBE SETTINGS ROUTES POST
 
      Route::post('/Anasayfa/mailSubscribeStatusPost', [MailSubscribeController::class, 'mailSubscribeStatus'])->name('mailSubscribeStatus');
      Route::post('/Anasayfa/mailSubscribeUpdatePost', [MailSubscribeController::class, 'mailSubscribeUpdatePost'])->name('mailSubscribeUpdatePost');
