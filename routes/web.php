@@ -50,9 +50,13 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
 
     Route::post('/MenuInsert', [MenuController::class, 'insertMenu'])->name('insertMenu');
 
-    // REFERANCESE ROUTES GET
+    // REFERANCES ROUTES GET
 
     Route::get('/Referanslar', [ReferancesController::class, 'index'])->name('referances');
+
+    // REFERANCES ROUTES POST
+
+    Route::post('/Referanslar/referanceInsertPost', [ReferancesController::class, 'referanceInsertPost'])->name('referanceInsertPost');
 
 
     // ANASAYFA CAROUSEL SETTİNGS ROUTES GET

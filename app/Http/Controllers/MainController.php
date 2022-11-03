@@ -22,6 +22,7 @@ class MainController extends Controller
     {
         self::$Data['carousel'] = DB::table('carousel')->first();
         self::$Data['mailSubscribe'] = DB::table('mailSubscribe')->first();
+        self::$Data['referances'] = DB::table('referances')->get();
         return view('index',self::$Data);
     }
 

@@ -14,7 +14,7 @@
 @section('content')
 <section class="padding-100-0-50">
     <div class="container">
-        <h5 class="title-default-coodiv-two">start your web site now with coodiv <span>simply dummy text of the
+        <h5 class="title-default-coodiv-two">Hayalindeki websiteyi Codecrew ile inşaa et! <span>simply dummy text of the
                 printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever
                 since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
                 specimen book</span></h5>
@@ -136,36 +136,14 @@
     <div class="container">
         <h2 class="d-none">our pertners</h2>
         <div class="owl-carousel pertners-carousel owl-theme">
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo1.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo2.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo3.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo4.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo5.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo1.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo2.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo3.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo4.png') }}" alt="" /> </a>
-            </div>
-            <div class="item">
-                <a href="#"> <img src="{{ asset('assets/img/pertners/logo5.png') }}" alt="" /> </a>
-            </div>
+            @foreach ($referances as $item)
+                <div class="item">
+                    <a style="padding-top: 50px;display:inline-block;max-height:164px;" target="_blank" href="{{ $item->r_url }}"> <img  src="{{ asset($item->r_logo) }}" alt="" /> </a>
+                </div>
+            @endforeach
+           
+        
+           
         </div>
     </div>
 </section>

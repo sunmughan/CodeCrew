@@ -60,7 +60,7 @@
         <div class="col-sm-5">
           <div class="d-flex align-items-end justify-content-center h-100">
             <img
-              src="{{ asset('assets/img/pertners/'.$item->r_logo) }}"
+              src="{{ asset($item->r_logo) }}"
               class="img-fluid mt-2"
               alt="Image"
               width="85"
@@ -91,6 +91,18 @@
             placeholder="Referans İsmi"
             value="{{ $item->r_name }}"
             name="user-fullname"
+          />
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label" for="basic-icon-default-fullname">Referans Website Linki</label>
+          <input
+            type="text"
+            class="form-control dt-full-name"
+            id="basic-icon-default-fullname"
+            placeholder="Referans Website Linki"
+            value="{{ $item->r_url }}"
+            name="r_url"
           />
         </div>
         <div class="mb-1">
@@ -152,8 +164,9 @@
   
 <div class="modal modal-slide-in new-user-modal fade" id="modal-new">
   <div class="modal-dialog">
-    <form class="add-new-user modal-content pt-0">
+    <form action="{{ route('referanceInsertPost') }}" method="POST" enctype="multipart/form-data" class="add-new-user modal-content pt-0">
       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">×</button>
+      @csrf
       <div class="modal-header mb-1">
         <h5 class="modal-title" id="exampleModalLabel">Referans Ekle</h5>
       </div>
@@ -166,6 +179,17 @@
             id="basic-icon-default-fullname"
             placeholder="Referans İsmi"
             name="r_name"
+          />
+        </div>
+
+        <div class="mb-1">
+          <label class="form-label" for="basic-icon-default-fullname">Referans Website Linki</label>
+          <input
+            type="text"
+            class="form-control dt-full-name"
+            id="basic-icon-default-fullname"
+            placeholder="Referans Website Linki"
+            name="r_url"
           />
         </div>
         <div class="mb-1">
