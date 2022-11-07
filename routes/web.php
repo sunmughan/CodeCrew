@@ -53,10 +53,12 @@ Route::middleware('Madmin')->prefix('Panel')->group( function () {
     // REFERANCES ROUTES GET
 
     Route::get('/Referanslar', [ReferancesController::class, 'index'])->name('referances');
+    Route::get('Referanslar/referanceDeleteGet/{id}', [ReferancesController::class, 'referanceDeleteGet'])->name('referanceDeleteGet');
 
     // REFERANCES ROUTES POST
 
     Route::post('/Referanslar/referanceInsertPost', [ReferancesController::class, 'referanceInsertPost'])->name('referanceInsertPost');
+    Route::any('/Referanslar/referanceUpdatePost/{id}', [ReferancesController::class, 'referanceUpdatePost'])->name('referanceUpdatePost');
 
 
     // ANASAYFA CAROUSEL SETTINGS ROUTES GET

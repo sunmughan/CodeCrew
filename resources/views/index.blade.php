@@ -138,7 +138,7 @@
         <div class="owl-carousel pertners-carousel owl-theme">
             @foreach ($referances as $item)
                 <div class="item">
-                    <a style="padding-top: 50px;display:inline-block;max-height:164px;" target="_blank" href="{{ $item->r_url }}"> <img  src="{{ asset($item->r_logo) }}" alt="" /> </a>
+                    <a style="padding-top: 50px;display:inline-block;max-height:164px;" href="javascript:void(0)"> <img  src="{{ asset($item->r_logo) }}" alt="" /> </a>
                 </div>
             @endforeach
            

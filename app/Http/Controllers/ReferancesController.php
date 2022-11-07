@@ -25,16 +25,43 @@ class ReferancesController extends Controller
     {
 
         $r_logo = Storage::putFile('referances', $request->file('r_logo'));
-
+        
         $insertReferance = DB::table('referances')->insert([
             'r_name' => $request->input('r_name'),
             'r_url' => $request->input('r_url'),
             'r_logo' => $r_logo,
         ]);
-
         
+        
+        return redirect()->route('referances',self::$Data);
+        
+    }
+    
+    public static function referanceUpdatePost(Request $request,$id)
+    {
+        
+        if($request->has('r_logo'))
+        {
+            $r_logo = Storage::putFile('referances', $request->file('r_logo'));
+            $updateReferance = DB::table('referances')->where('r_id',$id)->update([
+                'r_name' => $request->input('r_name'),
+                'r_url' => $request->input('r_url'),
+                'r_logo' => $r_logo
+            ]);
+        }else {
+
+            $updateReferance = DB::table('referances')->where('r_id',$id)->update([
+                'r_name' => $request->input('r_name'),
+                'r_url' => $request->input('r_url'),
+            ]);
+            
+        }
 
         return redirect()->route('referances',self::$Data);
-       
+    }
+
+    public static function referanceDeleteGet($id)
+    {
+        echo $id;
     }
 }

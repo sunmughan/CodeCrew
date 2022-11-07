@@ -22,6 +22,19 @@
     
 @endsection
 
+@section('breadcrumb-title','Carousel Ayarları')
+
+@section('breadcrumb-items')
+<li class="breadcrumb-item"><a href="{{ route('kontrolPaneli') }}">Pano</a>
+</li>
+<li class="breadcrumb-item"><a href="javascript:void(0);">Anasayfa</a>
+</li>
+<li class="breadcrumb-item active">Carousel Ayarları
+</li>
+    
+@endsection
+
+
 
 @section('content')
 
